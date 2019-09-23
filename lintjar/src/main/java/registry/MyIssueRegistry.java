@@ -2,6 +2,7 @@ package registry;
 
 import com.android.tools.lint.client.api.IssueRegistry;
 import com.android.tools.lint.detector.api.Issue;
+import com.paincker.lint.core.JsonDetector;
 import com.paincker.lint.core.LogDetector;
 import com.paincker.lint.core.NewThreadDetector;
 
@@ -16,6 +17,6 @@ public class MyIssueRegistry extends IssueRegistry {
     @Override
     public synchronized List<Issue> getIssues() {
         System.out.println("==== my lint start ====");
-        return Arrays.asList(LogDetector.ISSUE, NewThreadDetector.ISSUE);
+        return Arrays.asList(LogDetector.ISSUE, NewThreadDetector.ISSUE, JsonDetector.ISSUE);
     }
 }

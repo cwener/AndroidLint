@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
         callNewApi();
 
         Log.d("tag", "msg");
-
+        String.format("{'code\":%d, \"lat\":%f, \"lon\":%f}", 200, 1.0f, 1.0f);
         new Thread(new Runnable() {
             @Override
             public void run() {
