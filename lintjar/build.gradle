@@ -11,7 +11,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes("Lint-Registry": "com.paincker.lint.core.MyIssueRegistry")
+        attributes("Lint-Registry": "registry.MyIssueRegistry")
     }
 }
 
