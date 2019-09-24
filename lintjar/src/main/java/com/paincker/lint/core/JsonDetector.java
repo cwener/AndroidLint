@@ -3,23 +3,15 @@ package com.paincker.lint.core;
 import com.android.tools.lint.checks.StringFormatDetector;
 import com.android.tools.lint.detector.api.Category;
 import com.android.tools.lint.detector.api.Detector;
-import com.android.tools.lint.detector.api.Detector;
 import com.android.tools.lint.detector.api.Implementation;
 import com.android.tools.lint.detector.api.Issue;
 import com.android.tools.lint.detector.api.JavaContext;
 import com.android.tools.lint.detector.api.Scope;
 import com.android.tools.lint.detector.api.Severity;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
 import com.intellij.psi.JavaElementVisitor;
 import com.intellij.psi.PsiMethod;
 import com.intellij.psi.PsiMethodCallExpression;
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
-import java.util.Arrays;
-import java.util.List;
-
-import utils.JsonUtils;
 import utils.JsonUtils2;
 
 /**

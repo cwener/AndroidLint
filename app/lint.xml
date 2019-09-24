@@ -6,8 +6,8 @@
     <!--<issue id="ShowToast" severity="error"/>-->
     <!--&lt;!&ndash;忽略指定路径的指定问题，支持正则表达式或path匹配&ndash;&gt;-->
     <!--<issue id="NewApi">-->
-        <!--<ignore regexp=".*MainActivity.java"/>-->
-        <!--<ignore path="**/com/paincker/lint/demo/MainActivity.java"/>-->
+        <!--<ignore regexp=".*SecondMainActivity.java"/>-->
+        <!--<ignore path="**/com/paincker/lint/demo/SecondMainActivity.java"/>-->
         <!--<ignore path="res/layout/activation.xml"/>-->
     <!--</issue>-->
 </lint>
