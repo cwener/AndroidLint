@@ -1,5 +1,8 @@
 package utils;
 
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
 import java.text.CharacterIterator;
 import java.text.StringCharacterIterator;
 
@@ -203,9 +206,21 @@ public class JsonUtils {
     }
 
     public static void main(String[] args) {
-        String jsonStr = "{\"website\":\"oschina.net\"}";
-        String jsonStr2 = "{\"code\":%d, \"lat\":%f, \"lon\":%f}";
+        String jsonStr = "{\"website\":\"oschina.net\", \"data\":{}}";
+        String jsonStr2 = "{\'code\":%d, \"lat\":%f, \"lon\":%f}";
         String jsonStr3 = String.format(jsonStr2, 200, 1.0f, 2.0f);
-        System.out.println(jsonStr3 + ":" + new JsonUtils().validate(jsonStr3));
+        JsonElement jsonElement = null;
+        try {
+            jsonElement = new JsonParser().parse(jsonStr2);
+            return;
+        } catch (Exception e) {
+            System.out.println("不是json");
+        }
+        if (jsonElement == null) {
+            System.out.println("不是json");
+        }
+        if (!jsonElement.isJsonObject()) {
+            System.out.println("不是json");
+        }
     }
 }

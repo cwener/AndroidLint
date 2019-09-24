@@ -1,5 +1,6 @@
 package com.paincker.lint.demo;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +20,8 @@ public class MainActivity extends Activity {
         callNewApi();
 
         Log.d("tag", "msg");
-        String.format("{'code\":%d, \"lat\":%f, \"lon\":%f}", 200, 1.0f, 1.0f);
+        String.format("{\"code\":%d, \"lat\":%f, \"lon\":%f}", 200, 1.0f, 1.0f);
+        String.format(getString(R.string.app_name), 20);
         new Thread(new Runnable() {
             @Override
             public void run() {
