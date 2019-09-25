@@ -95,7 +95,7 @@ public class SecondMainActivity extends Activity implements View.OnClickListener
 
         android.widget.Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
         Log.d("test lint", "msg");
-
+        if (!"tmp1".equals("tmp2"));
         new Message();
         Message.obtain();
         handler.obtainMessage();

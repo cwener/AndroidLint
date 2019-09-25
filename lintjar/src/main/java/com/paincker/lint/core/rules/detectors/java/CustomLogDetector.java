@@ -98,6 +98,7 @@ public class CustomLogDetector extends Detector implements Detector.JavaScanner 
                 JavaParser.ResolvedMethod method = (JavaParser.ResolvedMethod) resolve;
                 JavaParser.ResolvedClass containingClass = method.getContainingClass();
 
+                //因为下面这些是Android Log包里的方法，lint检测node的value为Log.d("test lint", "msg")，并是不以android.util.Log，所以需要推断出该被调用方法的类
                 if (resolve.getName().equals("v")
                         ||resolve.getName().equals("d")
                         ||resolve.getName().equals("i")

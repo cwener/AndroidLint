@@ -2,6 +2,7 @@ package registry;
 
 import com.android.tools.lint.client.api.IssueRegistry;
 import com.android.tools.lint.detector.api.Issue;
+import com.paincker.lint.core.ConstantEqualsDetector;
 import com.paincker.lint.core.JsonDetector;
 import com.paincker.lint.core.LogDetector;
 import com.paincker.lint.core.NewThreadDetector;
@@ -41,6 +42,7 @@ public class MyIssueRegistry extends IssueRegistry {
                 ImageFileSizeDetector.ISSUE,
                 HashMapForJDK7Detector.ISSUE,
                 HardcodedValuesDetector.ISSUE,
-                EnumDetector.ISSUE);
+                EnumDetector.ISSUE,
+                ConstantEqualsDetector.ISSUE);
     }
 }

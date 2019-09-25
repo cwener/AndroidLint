@@ -22,6 +22,7 @@ public class MainActivity extends Activity {
         Log.d("tag", "msg");
         String.format("{\"code\":%d, \"lat\":%f, \"lon\":%f}", 200, 1.0f, 1.0f);
         String.format(getString(R.string.app_name), 20);
+        "tmp1".equals("tmp2");
         new Thread(new Runnable() {
             @Override
             public void run() {
